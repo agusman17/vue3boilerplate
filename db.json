@@ -1,0 +1,25 @@
+{
+  "assets": [
+    {
+      "id": 1,
+      "name": "Table",
+      "detail": "Kitchen table in good condition",
+      "qty": 1,
+      "broken": false
+    },
+    {
+      "id": 2,
+      "name": "Chair",
+      "detail": "Kitchen chair in good condition",
+      "qty": 1,
+      "broken": false
+    },
+    {
+      "id": 3,
+      "name": "Sofa",
+      "detail": "Sofa in broken condition",
+      "qty": 3,
+      "broken": true
+    }
+  ]
+}
