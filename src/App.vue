@@ -1,26 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container mx-auto px-4 py-4 flex justify-center">
+
+    <div class="w-6/12 border border-stone-200 p-4">
+
+      <Header title="Asset Management" @toggle-add="toggleAdd()"/>
+
+      <router-view :showAdd = showAdd></router-view>
+
+      <Footer />
+      
+    </div>
+
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/common/Header"
+import Footer from "./components/common/Footer"
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    Footer
+  },
+  data(){
+    return {
+      showAdd : false
+    }
+  },
+  methods:{
+    toggleAdd(){
+      this.showAdd = !this.showAdd
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
